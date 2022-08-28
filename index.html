@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Are You Dumb?</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded',function () {
+            document.querySelector('#no').onclick= ()=>{
+                let x = Math.floor((Math.random()*10)+50)
+                let y = Math.floor((Math.random()*100))
+                document.getElementById('no').style.left = `${x}%`;
+                document.getElementById('no').style.top = `${y}%`;
+            }
+            document.querySelector('#no').onmouseover= ()=>{
+                let x = Math.floor((Math.random()*10)+50)
+                let y = Math.floor((Math.random()*100))
+                document.getElementById('no').style.left = `${x}%`;
+                document.getElementById('no').style.top = `${y}%`;
+            }
+
+            document.querySelector('#yes').onclick = ()=>{
+                document.querySelector('#question').style.display='none';
+                document.querySelector('#answer').style.display='block';
+            }
+        });
+    </script>
+    <body>
+        <div id="question">
+            <h1>Are You Dumb?</h1>
+            <div id="buttons">
+                <input class="button-4" id="yes" value="Yes" type="button">
+                <input class="button-4" id="no" value="No" type="button">
+            </div>
+        </div>
+        <div id="answer" style="display: none;">
+            <h1>I Knew It &#128514;</h1>
+        </div>
+        
+        
+    </body>
+</html>
